@@ -1,43 +1,25 @@
 @extends('base.structure')
 
+@section('styles')
+    <link rel="stylesheet" href="/assets/styles/login.css" /> 
+    <link rel="stylesheet" href="/assets/styles/base.styles.css" /> 
+@endsection
+
 @section('content')
-    {!! $content !!}
+    <form onsubmit="loginMethod(); return false;">
+        <div class="login-box">
+            <img src="/assets/images/admin-profile.png" class="image-user" />
+            <h2 class="title-login">Administrator Login</h2>
+            <ul class="error-bag"></ul>
+            <input type="text" name="username" id="username" placeholder="jhon.doe@email.com" class="login-input" />
+            <br>
+            <input type="password" name="password" id="password" placeholder="•••••••••••••••••••••" class="login-input" />
+            <br>
+            <button type="button" class="btn-login">Enter</button>
+        </div>
+    </form>
+@endsection
 
-    <script>
-        const editor = grapesjs.init({
-            // Indicate where to init the editor. You can also pass an HTMLElement
-            container: '#gjs',
-            // Get the content for the canvas directly from the element
-            // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
-            fromElement: true,
-            // Size of the editor
-            height: '300px',
-            width: 'auto',
-            // Disable the storage manager for the moment
-            storageManager: false,
-            // Avoid any default panel
-            panels: { defaults: [] },
-        });
-    </script>
-
-    <script>
-        $('#0x817').click(function() {
-            const htmlContent = editor.getHtml();
-            atomic('store-website', {
-                method: 'POST',
-                data: {
-                    code: "landing2", 
-                    content: htmlContent 
-                }
-            })
-                .then(function (response) {
-                    console.log(response.data); // xhr.responseText
-                    console.log(response.xhr);  // full response
-                })
-                .catch(function (error) {
-                    console.log(error.status); // xhr.status
-                    console.log(error.statusText); // xhr.statusText
-                });
-        });
-    </script>
+@section('scripts')
+    <script src="/assets/js/login.js" type="text/javascript"></script>
 @endsection

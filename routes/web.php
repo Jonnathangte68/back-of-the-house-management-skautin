@@ -12,4 +12,7 @@
 */
 
 $router->get('/', 'WelcomeScreenController');
-$router->post('store-website', 'DataWebsiteManagerController@store');
+$router->post('store-website', ['middleware' => 'auth', 'DataWebsiteManagerController@store']);
+$router->post('log-me-in', 'LogInController');
+$router->post('set-new-password', 'ChangePasswordController');
+$router->get('dashboard', ['middleware' => 'auth', 'uses' => 'DashboardController']);
