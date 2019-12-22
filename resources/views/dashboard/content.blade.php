@@ -1,17 +1,16 @@
 @extends('base.logged-in-structure')
 
+@section('content')
+    @include('dashboard.partials.sidebar')
+    <section class="section-dashboard">
+        @yield('main_section')
+    </section>
+@endsection
+
 @section('styles')
     <link rel="stylesheet" href="/assets/styles/dashboard.css" /> 
     <link rel="stylesheet" href="/assets/styles/base.styles.css" /> 
     <link rel="stylesheet" href="/assets/styles/sidebar.css" />
-@endsection
-
-@section('content')
-    @section('navigation.sidebar')
-    @show
-    <div class="section-dashboard">
-        @yield('content')
-    </div>
 @endsection
 
 @section('scripts')

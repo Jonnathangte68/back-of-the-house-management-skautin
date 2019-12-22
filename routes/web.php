@@ -16,3 +16,4 @@ $router->post('store-website', ['middleware' => 'auth', 'DataWebsiteManagerContr
 $router->post('log-me-in', 'LogInController');
 $router->post('set-new-password', 'ChangePasswordController');
 $router->get('dashboard', ['middleware' => 'auth', 'uses' => 'DashboardController']);
+$router->get('/editor', ['middleware' => 'auth', 'uses' => 'PageEditorController@index']);
