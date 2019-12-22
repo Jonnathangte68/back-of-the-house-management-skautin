@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 
 use Illuminate\Http\Request;
 
-class PageEditorController extends Controller
+class ContentController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,7 +21,7 @@ class PageEditorController extends Controller
 
     public function view(Request $request)
     {
-        return view('dashboard.options.editor');
+        return view('dashboard.options.labels');
     }
 
     public function store(Request $request)
