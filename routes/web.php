@@ -16,4 +16,10 @@ $router->post('store-website', ['middleware' => 'auth', 'DataWebsiteManagerContr
 $router->post('log-me-in', 'LogInController');
 $router->post('set-new-password', 'ChangePasswordController');
 $router->get('dashboard', ['middleware' => 'auth', 'uses' => 'DashboardController']);
-$router->get('/editor', ['middleware' => 'auth', 'uses' => 'PageEditorController@index']);
+$router->get('/editor', ['middleware' => 'auth', 'uses' => 'PageEditorController@view']);
+$router->get('/labels', ['middleware' => 'auth', 'uses' => 'ContentController@view']);
+$router->get('/corporate', ['middleware' => 'auth', 'uses' => 'CorporateInformationController@view']);
+$router->get('/queries', ['middleware' => 'auth', 'uses' => 'QueryController@view']);
+$router->get('/advertisements', ['middleware' => 'auth', 'uses' => 'AdvertisementController@view']);
+$router->get('/settings', ['middleware' => 'auth', 'uses' => 'SettingsController@view']);
+$router->get('/notes', ['middleware' => 'auth', 'uses' => 'NotesController@view']);
