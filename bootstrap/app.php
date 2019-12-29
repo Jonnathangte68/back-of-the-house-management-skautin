@@ -73,7 +73,6 @@ $app->bind('Illuminate\Contracts\Cookie\QueueingFactory', 'cookie');
 
 $app->middleware([
     \Illuminate\Session\Middleware\StartSession::class,
-    App\Http\Middleware\AuthenticateRequest::class,
 ]);
 
 $app->routeMiddleware([

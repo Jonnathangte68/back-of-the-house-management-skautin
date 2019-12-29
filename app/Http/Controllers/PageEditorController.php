@@ -28,4 +28,17 @@ class PageEditorController extends Controller
     {
 
     }
+
+    public function edit(Request $request, String $page)
+    {
+        return view('editor_pages.edit', 
+            [
+                'page' => $page
+            ]);
+    }
+
+    public function editNew(Request $request, String $page)
+    {
+        return view('editor_pages.editor-test-fly');
+    }
 }

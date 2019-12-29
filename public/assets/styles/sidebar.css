@@ -67,3 +67,7 @@
     color: #ffffff;
     text-decoration: none;
 }
+
+.sidebar-container {
+    overflow-y: auto;
+}

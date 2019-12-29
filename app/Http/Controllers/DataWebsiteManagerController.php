@@ -19,6 +19,48 @@ class DataWebsiteManagerController extends Controller
         //
     }
 
+    public function get(Request $request, String $code)
+    {
+        $apiServerPath = env("API_SERVER");
+        $client = new Client();
+        try {
+            $result = $client->get($apiServerPath.'/api/website-content-test/'.$code, [
+                'headers' => [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                ],
+                'form_params' => [
+                    'code' => $code
+                ]
+            ]);
+            $serverResponse = json_decode($result->getBody()->getContents());
+            if($serverResponse->content) {
+                $response = array(
+                    'status' => true, 
+                    'message' => $serverResponse
+                );
+                return json_encode($response);
+            } else {
+                $response = array(
+                    'status' => false, 
+                    'message' => $serverResponse->content
+                );
+                return json_encode($response);
+            }
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
+            $et = $guzzleResult = $e->getResponse();
+            $response = array(
+                'status' => false, 
+                'message' => $et
+            );
+            return json_encode($response);
+        }
+        $response = array(
+            'status' => false, 
+            'message' => "Unexpected"
+        );
+        return json_encode($response);
+    }
+
     public function store(Request $request)
     {
         $apiServerPath = env("API_SERVER");
@@ -30,12 +72,36 @@ class DataWebsiteManagerController extends Controller
                 ],
                 'form_params' => [
                     'code' => $request->input('code'),
-                    'content' => json_encode($request->input('content')),
+                    'content' => $request->input('content'),
+                    'styles' => $request->input('css'),
                 ]
             ]);
+            $serverResponse = json_decode($result->getBody()->getContents());
+            if($serverResponse->status) {
+                $response = array(
+                    'status' => true, 
+                    'message' => $serverResponse->message
+                );
+                return json_encode($response);
+            } else {
+                $response = array(
+                    'status' => false, 
+                    'message' => $serverResponse->message
+                );
+                return json_encode($response);
+            }
         } catch (\GuzzleHttp\Exception\RequestException $e) {
-            $guzzleResult = $e->getResponse();
+            $et = $guzzleResult = $e->getResponse();
+            $response = array(
+                'status' => false, 
+                'message' => $et
+            );
+            return json_encode($response);
         }
-        return $result->getBody()->getContents();
+        $response = array(
+            'status' => false, 
+            'message' => "Unexpected"
+        );
+        return json_encode($response);
     }
 }

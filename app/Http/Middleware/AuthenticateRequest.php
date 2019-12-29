@@ -15,8 +15,8 @@ class AuthenticateRequest
      */
     public function handle($request, Closure $next)
     {
-        $loginToken = $request->session()->get('login_token');
-        if (!empty($loginToken) && $request->input('login_token') !== $loginToken) {
+        $loginToken = $request->session()->get('secret-login');
+        if (empty($loginToken) || !$loginToken) { // && $request->input('login_token') !== $loginToken) {
             return redirect('/');
         }
 

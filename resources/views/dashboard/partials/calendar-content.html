@@ -1,0 +1,43 @@
+<div class="box-container">
+    <div class="box-preview">
+        <span id="empty-message-prv">Write something to start updating...</span>
+        <div class="preview-inside-box box-color-red hide">
+            <h2 class="inside-box-title">
+                <span id="preview-box-title">title test</span>
+                <span class="date-todo">12/12/2019</span>
+            </h2>
+            <p id="preview-box-description" class="inside-box-text-content">
+                test
+            </p>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="title_todo">Title:</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Clean DB duplicated records..."
+            id="title_todo"
+        />
+    </div>
+    <div class="form-group">
+        <label for="title_todo">Title:</label>
+        <textarea class="form-control" id="description_todo"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Color:</div>
+        <div class="col-sm-8 class-color-wheels">
+            <i
+                class="fa fa-circle red-circle circle selected"
+                aria-hidden="true"
+            ></i>
+            <i class="fa fa-circle black-circle circle" aria-hidden="true"></i>
+            <i class="fa fa-circle blue-circle circle" aria-hidden="true"></i>
+            <i class="fa fa-circle yellow-circle circle" aria-hidden="true"></i>
+            <i class="fa fa-circle green-circle circle" aria-hidden="true"></i>
+            <i class="fa fa-circle grey-circle circle" aria-hidden="true"></i>
+        </div>
+    </div>
+    <button id="add-todo" class="btn btn-primary full-button">ADD</button>
+</div>

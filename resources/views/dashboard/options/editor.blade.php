@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Landing
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/landing" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -31,7 +31,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Sign Up Talent
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/sign-up-talent" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -44,7 +44,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Sign Up Recruiter
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/sign-up-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -62,7 +62,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             General Search
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/general-search" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -75,7 +75,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Smpl Search Rec
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/recruiter-simple-search" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -88,7 +88,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Smpl Search Tal
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/talent-simple-search" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -106,7 +106,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Talent Profile
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/profile-page-talent" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -119,7 +119,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Recruiter Profile
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/profile-page-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -137,7 +137,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Rec. Vacant List
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/job-list-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -150,7 +150,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Vacant Detail
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/job-detail-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -168,7 +168,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Connect. Talent
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/connections-talent" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -181,7 +181,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Conn. Recruiter
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/connections-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -199,7 +199,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Chat Talent
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/chat-conversation-talent" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -212,7 +212,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Chat Recruiter
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/chat-conversation-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -230,7 +230,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Settings Talent
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/settings-talent" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -243,7 +243,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Settings Recruiter
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/settings-recruiter" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -261,7 +261,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Tals for recruiters
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/opportunities" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
@@ -274,7 +274,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             Posted Jobs Rec
-                            <a href="#" class="btn btn-primary edit-button">
+                            <a href="editor/posted-jobs" class="btn btn-primary edit-button">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </p>
