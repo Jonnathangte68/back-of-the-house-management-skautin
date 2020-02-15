@@ -22,6 +22,7 @@ $router->get('/queries', ['middleware' => 'auth', 'uses' => 'QueryController@vie
 $router->get('/advertisements', ['middleware' => 'auth', 'uses' => 'AdvertisementController@view']);
 $router->get('/settings', ['middleware' => 'auth', 'uses' => 'SettingsController@view']);
 $router->get('/troubleshooting', ['middleware' => 'auth', 'uses' => 'TroubleshooterController@view']);
+$router->get('/scripts', ['middleware' => 'auth', 'uses' => 'ScriptController@view']);
 $router->get('/notes', ['middleware' => 'auth', 'uses' => 'NotesController@view']);
 $router->get('/editor/{page}', ['middleware' => 'auth', 'uses' => 'PageEditorController@editNew']);
 $router->get('/email-editor', ['middleware' => 'auth', 'uses' => 'EmailEditorController@index']);
