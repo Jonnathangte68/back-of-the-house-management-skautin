@@ -26,6 +26,7 @@ $router->get('/scripts', ['middleware' => 'auth', 'uses' => 'ScriptController@vi
 $router->get('/notes', ['middleware' => 'auth', 'uses' => 'NotesController@view']);
 $router->get('/editor/{page}', ['middleware' => 'auth', 'uses' => 'PageEditorController@editNew']);
 $router->get('/email-editor', ['middleware' => 'auth', 'uses' => 'EmailEditorController@index']);
+$router->get('/code-editor-view/{fileId}', ['middleware' => 'auth', 'uses' => 'ScriptController@editCodeView']);
 // End view renderers
 $router->post('/store-todo', ['middleware' => 'auth', 'uses' => 'NotesController@store']);
 $router->get('/get-todos', ['middleware' => 'auth', 'uses' => 'NotesController@getAll']);

@@ -24,8 +24,13 @@ class ScriptController extends Controller
         return view('dashboard.options.scripts_view');
     }
 
-    public function store(Request $request)
+    public function editCodeView(Request $request, String $fileId) 
     {
+        return view('editor_pages.edit-code-view', ["fileContent" => ""]);
+    }
 
+    public function store(Request $request, $fileId)
+    {
+        
     }
 }
