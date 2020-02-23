@@ -18,17 +18,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-file-id="1">
-                    <th style="width: 76%" scope="row">Landing buttons redirects</th>
-                    <td style="width: 8%;text-align:center;">05/15/2019</td>
-                    <td style="width: 10%;text-align:center;">1</td>
-                    <td style="width: 6%;">
-                        <i class="fa fa-pencil-square-o edit-field" aria-hidden="true" style="color:blue;cursor: pointer;"  data-toggle="tooltip" title="Edit"></i>
-                        <i class="fa fa-trash delete-field" aria-hidden="true" style="color:red;cursor: pointer;margin-left:15px;" data-toggle="tooltip" title="Delete"></i>
-                    </td>
-                    </tr>
+                    @foreach ($files as $file)
+                        <tr data-file-id="{!! $file->file_name !!}">
+                            <th style="width: 54%" scope="row">{{ $file->file_name . ".js" }}</th>
+                            <td style="width: 30%;text-align:center;">{{ $file->updated_at }}</td>
+                            <td style="width: 10%;text-align:center;">{{ $file->webpage }}</td>
+                            <td style="width: 6%;">
+                                <i class="fa fa-pencil-square-o edit-field" aria-hidden="true" style="color:blue;cursor: pointer;"  data-toggle="tooltip" title="Edit"></i>
+                                <i class="fa fa-trash delete-field" aria-hidden="true" style="color:red;cursor: pointer;margin-left:15px;" data-toggle="tooltip" title="Delete"></i>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
+            @if(count($files)===0)
+                <div style="width: 100%;text-align:center;">
+                    <p>No data found.</p>
+                </div>
+            @endif
             <button id="add-new-script-file" class="btn btn-primary full-button">
                     (+) ADD NEW
                 </button>
@@ -46,5 +53,6 @@
 
 @section('scripts')
     @parent
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/js/scripts_view.js"></script>
 @endsection

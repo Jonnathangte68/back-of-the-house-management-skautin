@@ -29,7 +29,10 @@ $router->get('/email-editor', ['middleware' => 'auth', 'uses' => 'EmailEditorCon
 $router->get('/code-editor-view/{fileId}', ['middleware' => 'auth', 'uses' => 'ScriptController@editCodeView']);
 // End view renderers
 $router->post('/store-todo', ['middleware' => 'auth', 'uses' => 'NotesController@store']);
+$router->post('/store-script-file', ['middleware' => 'auth', 'uses' => 'ScriptController@store']);
 $router->get('/get-todos', ['middleware' => 'auth', 'uses' => 'NotesController@getAll']);
 $router->get('/log-out', ['middleware' => 'auth', 'uses' => 'LogOutController']);
 $router->get('retrive-website/{code}', ['middleware' => 'auth', 'uses' => 'DataWebsiteManagerController@get']);
 $router->post('store-website', ['middleware' => 'auth', 'uses' => 'DataWebsiteManagerController@store']);
+$router->post('/update-script-file-content', ['middleware' => 'auth', 'uses' => 'ScriptController@updateCode']);
+$router->post('/delete-script-file/{id}', ['middleware' => 'auth', 'uses' => 'ScriptController@delete']);
